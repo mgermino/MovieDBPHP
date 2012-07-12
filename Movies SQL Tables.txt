@@ -1,0 +1,23 @@
+create table movies (
+movieid int unsigned not null auto_increment primary key,
+moviename varchar(255),
+directid int unsigned not null,
+adddate date
+);
+
+create table genres (
+genreid int unsigned not null auto_increment primary key,
+genre varchar(255),
+movieid int unsigned not null
+);
+
+create table ratings (
+ratingid int unsigned not null auto_increment primary key,
+rating float(2,1),
+movieid int unsigned not null
+);
+
+create table directors (
+directid int not null auto_increment primary key,
+directname varchar(255)
+);
